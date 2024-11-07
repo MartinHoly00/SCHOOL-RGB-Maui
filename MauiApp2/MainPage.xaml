@@ -1,0 +1,40 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MauiApp2.MainPage">
+
+    <ScrollView>
+        <Grid x:Name="Container" BackgroundColor="White" VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand">
+            <Frame BackgroundColor="White" CornerRadius="10" Padding="10" WidthRequest="800" HeightRequest="300">
+                <StackLayout>
+                    <Label x:Name="ColorMaker" Text="Color Maker" FontSize="Large" HorizontalOptions="Center" TextColor="Black"></Label>
+                    <Grid RowDefinitions="auto, auto, auto, auto, auto">
+                        <FlexLayout Grid.Row="1" Direction="Row" JustifyContent="SpaceBetween">
+                            <Label Text="red" VerticalOptions="Center" WidthRequest="50" TextColor="Black"></Label>
+                            <Slider x:Name="RedSlider" MaximumTrackColor="Red" WidthRequest="550" MinimumTrackColor="Red" ValueChanged="OnSliderValueChanged"></Slider>
+                            <Label x:Name="RedValueLabel" VerticalOptions="Center" WidthRequest="50" TextColor="Black">kys</Label>
+                        </FlexLayout>
+                        <FlexLayout Grid.Row="2" Direction="Row" JustifyContent="SpaceBetween">
+                            <Label Text="green" VerticalOptions="Center" WidthRequest="50" TextColor="Black"></Label>
+                            <Slider x:Name="GreenSlider" MaximumTrackColor="Green" WidthRequest="550" MinimumTrackColor="Green" ValueChanged="OnSliderValueChanged"></Slider>
+                            <Label x:Name="GreenValueLabel" VerticalOptions="Center" WidthRequest="50" TextColor="Black">kys</Label>
+                        </FlexLayout>
+                        <FlexLayout Grid.Row="3" Direction="Row" JustifyContent="SpaceBetween">
+                            <Label Text="blue" VerticalOptions="Center" WidthRequest="50" TextColor="Black"></Label>
+                            <Slider x:Name="BlueSlider" MaximumTrackColor="blue" WidthRequest="550" MinimumTrackColor="Blue" ValueChanged="OnSliderValueChanged"></Slider>
+                            <Label x:Name="BlueValueLabel" VerticalOptions="Center" WidthRequest="50" TextColor="Black">kys</Label>
+                        </FlexLayout>
+                        <Frame x:Name="HexColorButton" Grid.Row="4" Padding="10" HorizontalOptions="Center" WidthRequest="150" BorderColor="black">
+                            <StackLayout>
+                                <ImageButton Source="copy.svg" Margin="10" WidthRequest="20" HorizontalOptions="Center" Clicked="OnCopyClick">
+                                    
+                                </ImageButton>
+                            </StackLayout>                           
+                        </Frame>
+                    </Grid>
+                </StackLayout>
+            </Frame>
+        </Grid>
+    </ScrollView>
+
+</ContentPage>
